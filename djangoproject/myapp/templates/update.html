@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #dataForm {
+            background-color: #ffffff;
+            width: 20%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #dataForm label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        #dataForm input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #dataForm button {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #dataForm button:hover {
+            background-color: rgb(146, 146, 146);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="dataForm" method="POST">
+        {% csrf_token %}
+        <!-- <label>Id:</label> -->
+        <input type="hidden"  name="id" required value="{{student.id}}"><br><br>
+        <label>Name:</label>
+        <input type="text"  name="name" required value="{{student.name}}"><br><br>
+        <label>Email:</label>
+        <input type="email"  name="email" required value="{{student.email}}"><br><br>
+        <label>Phone Number:</label>
+        <input type="bigint"  name="phoneno" required value="{{student.phoneno}}"><br><br>       
+        <!-- <label>Time:</label>
+        <input type="time"  name="time"><br><br> -->
+        <button type="submit">Update Student</button>
+    </form>
+
+    {% comment %}
+    Welcome to the Fight Club
+    {% endcomment%}
+</body>
+
+</html>

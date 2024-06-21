@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <table border="5">
+        <th> ID:</th>
+        <th> Name:</th>
+        <th> Email:</th>
+        <th> Phone no:</th>
+        <th colspan="2"> Edit </th>
+        
+
+        {% for i in sob %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phoneno}}</td>
+            <td><a href="../edit/{{i.id}}">Edit</a></td>
+            <td><a href="../delete/{{i.id}}">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
+</body>
+</html>

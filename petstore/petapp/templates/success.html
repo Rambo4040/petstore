@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Success</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #5cb85c;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    margin-top: 20px;
+    color: #555;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #4cae4c;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Successfully Placed!</h1>
+        <p>Thank you for your order, {{ session }}. Your order has been placed successfully.</p>
+        
+        <h2>Order Details</h2>
+        <p><strong>Order Number:</strong> {{order.ordernumber }}</p>
+        <p><strong>Order Date:</strong> {{ order.orderdate }}</p>
+        <p><strong>Order Status:</strong> {{payobj.paymentstatus }}</p>
+        
+        <!-- <h3>Items in your order:</h3>
+        <ul>
+            {% for item in cartobj %}
+                <li>{{ item.pid.name }} - Quantity: {{ item.quantity }} - Total: ${{ item.totalamount }}</li>
+            {% endfor %}
+        </ul> -->
+        
+        <h3>Total Bill: ${{cartobj.totalbill}}</h3>
+        
+
+    </div>
+</body>
+</html>
+
+payment successfull

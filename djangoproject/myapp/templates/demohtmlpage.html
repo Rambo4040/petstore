@@ -1,0 +1,26 @@
+{% include 'menu2.html' with name="Rahul" id="69" %}
+{% load static %}
+  
+<html>
+    <head>
+        <link rel="stylesheet" href="{%static 'style.css'%}">
+    </head>
+        <body>
+        <p>This is my first html page in django from templates folder.</p>
+        <!-- Hello {{name}} Good morning your id is {{id}} -->
+        
+        {% for i in sdict %}<br>
+            {{i.name}} {{greeting}}
+        {% endfor %}
+
+        {% comment %}
+        comment line
+        {% endcomment%}
+        
+        {% if number == 2 %}
+        <h3>Number value is 2</h3>
+        {% else %}
+        <h3> not 2 </h3>
+        {% endif %}
+        </body>
+</html>

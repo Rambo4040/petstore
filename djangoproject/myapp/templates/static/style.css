@@ -1,0 +1,27 @@
+
+#topnav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: Black;
+    font-size: 15px;
+ }
+ 
+ .nav-link {
+    display: inline-block;
+    width: 10%;
+    height: 50px;   
+    color: White;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+ }
+ 
+ #logo {
+    width: 120px;
+ 
+    background-color: RoyalBlue;
+ 
+    font-weight: bold;
+ }
